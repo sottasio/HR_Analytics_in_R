@@ -91,55 +91,55 @@ Let's run some tests on the variables, to watch their frequencies.
 qplot(hr$average_montly_hours, geom = "histogram",col=I("blue"), main = "Monthly hours", xlab = "Average monthly hours", ylab = "Frequency",bins = 20)
 ```
 
-![](HR_Analysis_plots/unnamed-chunk-6-1.png)
+![](HR_Analysis_plots/unnamed-chunk-unnamed-chunk-6-1.png)
 
 ``` r
 qplot(hr$satisfaction_level, geom = "histogram", col=I("blue"), main = "Satisfaction level", xlab = "Levels from 0-1", ylab = "Frequency",bins = 20)
 ```
 
-![](HR_Analysis_plots/unnamed-chunk-6-2.png)
+![](HR_Analysis_plots/unnamed-chunk-unnamed-chunk-6-2.png)
 
 ``` r
 qplot(hr$last_evaluation, geom = "histogram", col=I("blue"), main = "Last evaluation", xlab = "Evaluation from 0-1", ylab = "Frequency",bins = 20)
 ```
 
-![](HR_Analysis_plots/unnamed-chunk-6-3.png)
+![](HR_Analysis_plots/unnamed-chunk-unnamed-chunk-6-3.png)
 
 ``` r
 qplot(hr$number_project, geom = "histogram", col=I("blue"), main = "Number of projects", xlab = "Projects", ylab = "Frequency",bins = 20)
 ```
 
-![](HR_Analysis_plots/unnamed-chunk-6-4.png)
+![](HR_Analysis_plots/unnamed-chunk-unnamed-chunk-6-4.png)
 
 ``` r
 qplot(hr$time_spend_company, geom = "histogram", col=I("blue"), main = "Time in company", xlab = "Time in company in years", ylab = "Frequency",bins = 20)
 ```
 
-![](HR_Analysis_plots/unnamed-chunk-6-5.png)
+![](HR_Analysis_plots/unnamed-chunk-unnamed-chunk-6-5.png)
 
 ``` r
 qplot(hr$Work_accident, geom = "histogram", col=I("blue"), main = "Work accident", xlab = "Work accident", ylab = "Frequency",bins = 20)
 ```
 
-![](HR_Analysis_plots/unnamed-chunk-6-6.png)
+![](HR_Analysis_plots/unnamed-chunk-unnamed-chunk-6-6.png)
 
 ``` r
 qplot(hr$promotion_last_5years, geom = "histogram", col=I("blue"), main = "Been promoted last 5y.", xlab = "0 = no, 1 = yes", ylab = "Frequency",bins = 20)
 ```
 
-![](HR_Analysis_plots/unnamed-chunk-6-7.png)
+![](HR_Analysis_plots/unnamed-chunk-unnamed-chunk-6-7.png)
 
 ``` r
 qplot(hr$sales, geom = "bar", colour = sales, main = "Sales", xlab = "Sales", ylab = "Frequency", data = hr)
 ```
 
-![](HR_Analysis_plots/unnamed-chunk-6-8.png)
+![](HR_Analysis_plots/unnamed-chunk-unnamed-chunk-6-8.png)
 
 ``` r
 qplot(hr$salary, geom = "bar", colour = salary, main = "Salary", xlab = "Salary in 3 levels", ylab = "Frequency", data = hr)
 ```
 
-![](HR_Analysis_plots/unnamed-chunk-6-9.png)
+![](HR_Analysis_plots/unnamed-chunk-unnamed-chunk-6-9.png)
 
 <br><br>
 
@@ -149,7 +149,7 @@ Next, we will look at the target variable "Left".
 qplot(hr$left, geom = "histogram", col=I("blue"), main = "Has he left?", xlab = "0 = no, 1 = yes", ylab = "Frequency",bins = 20)
 ```
 
-![](HR_Analysis_plots/unnamed-chunk-7-1.png)
+![](HR_Analysis_plots/unnamed-chunk-unnamed-chunk-7-1.png)
 
 We are noticing that the rows of the ones who left, are approx. 30% of the ones who stayed at the company. That means, that we later, will have to construct artificial data of employees, in order to have a balanced class nad get a good result with the machine learning algorithm.
 
@@ -169,13 +169,13 @@ We are focusing on some of their characteristics.
 qplot(hr_left$promotion_last_5years, geom = "histogram", col=I("red"), main = "Been promoted last 5y.", xlab = "0 = no, 1 = yes", ylab = "Frequency",bins = 20)
 ```
 
-![](HR_Analysis_plots/unnamed-chunk-9-1.png)
+![](HR_Analysis_plots/unnamed-chunk-unnamed-chunk-9-1.png)
 
 ``` r
 qplot(hr_left$satisfaction_level, geom = "histogram", col=I("blue"), main = "Satisfaction level", xlab = "Levels from 0-1", ylab = "Frequency",bins = 20)
 ```
 
-![](HR_Analysis_plots/unnamed-chunk-9-2.png)
+![](HR_Analysis_plots/unnamed-chunk-unnamed-chunk-9-2.png)
 
 Notice: only a few of the employees, stayed at the company even if they hadn't been promoted for the 5 last years.
 
@@ -447,7 +447,7 @@ importance_matrix <- xgb.importance(colnames(hr_smoted), model = hr.model)
 xgb.plot.importance(importance_matrix)
 ```
 
-![](HR_Analysis_plots/unnamed-chunk-23-1.png)
+![](HR_Analysis_plots/unnamed-chunk-unnamed-chunk-23-1.png)
 
 We clearly see that "Satisfaction level" gave us the most of information for the model, followed by "time spent in company" and "average monthly hours".
 
@@ -461,7 +461,7 @@ First, plotting Fpr against Tpr:
 plot (RP.perf, main = "ROC Curve", col = "blue")
 ```
 
-![](HR_Analysis_plots/unnamed-chunk-25-1.png)
+![](HR_Analysis_plots/unnamed-chunk-unnamed-chunk-25-1.png)
 
 <br> <br>
 
