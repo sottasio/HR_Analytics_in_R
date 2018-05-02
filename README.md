@@ -6,3 +6,5 @@ Why are our best and most experienced employees leaving prematurely? Have fun wi
 
 
 A simple analysis of a well known dataset and a machine learning algorithm application.
+
+Open up https://github.com/sottasio/HR_Analytics_in_R/blob/master/HR_Analysis.md to see presantation with charts.
